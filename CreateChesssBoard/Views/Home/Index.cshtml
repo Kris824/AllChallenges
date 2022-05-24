@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using System.Security.Cryptography.X509Certificates
+@using System.Text.Json
+@using System.Text.Json.Serialization
+@model List<List<int>>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<table id="board" style="border-collapse: collapse;">
+    @{ var obstacles = Model;}
+    @for (var i = 0; i < 100; i++)
+    {
+        <tr>
+            @for (var j = 0; j < 100; j++)
+            {
+                if (i == 54 && j == 30)
+                {
+                    <td id="cell-@i-@j" style="width: 20px; height: 20px; border: 1px solid black; background: aqua"></td>
+                }
+                else if (obstacles.Any(c => c[0] == i && c[1] == j))
+                {
+                    <td id="cell-@i-@j" style="width: 20px; height: 20px; border: 1px solid black; background: brown"></td>
+                }
+                else
+                {
+                    <td id="cell-@i-@j" style="width: 20px; height: 20px; border: 1px solid black;"></td>
+                }
+            }
+        </tr>
+    }
+</table>
+<input type="hidden" id="obstacles" value="@JsonSerializer.Serialize(obstacles)"/>
+
+<script src="js/index.js"></script>
+
+
+
