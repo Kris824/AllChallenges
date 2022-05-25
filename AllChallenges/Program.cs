@@ -10,28 +10,33 @@ namespace AllChallenges
         static void Main(string[] args)
         {
             var result = 0;
-            // 5. Queen's attack
+            var listResult = new List<int>();
+            // 6. ACM ICPC Team
+            listResult = AcmIcpcTeam.AcmTeam2(new List<string> { "10101", "11110", "00010" });
 
-            var obstacles = new List<List<int>>
-            {
-                new List<int> {5, 5},
-                new List<int> {4, 2},
-                new List<int> {2, 3},
-                new List<int> {4, 2}
-            };
 
-            obstacles = new List<List<int>>();
+            //// 5. Queen's attack
 
-            var lines = File.ReadAllLines(@"D:\kishan\AllChallenges\AllChallenges\Input6.txt");
-            obstacles.AddRange(lines.Select(line => line.Split(", "))
-                .Select(elements => new List<int> {int.Parse(elements[0]), int.Parse(elements[1])}));
-
-            //obstacles = new List<List<int>>
+            //var obstacles = new List<List<int>>
             //{
-            //    new List<int> {3, 5}
+            //    new List<int> {5, 5},
+            //    new List<int> {4, 2},
+            //    new List<int> {2, 3},
+            //    new List<int> {4, 2}
             //};
 
-            result = QueensAttack.NumberOfMoves3(100, 100, 48, 81, obstacles);
+            //obstacles = new List<List<int>>();
+
+            //var lines = File.ReadAllLines(@"D:\kishan\AllChallenges\AllChallenges\Input6.txt");
+            //obstacles.AddRange(lines.Select(line => line.Split(", "))
+            //    .Select(elements => new List<int> {int.Parse(elements[0]), int.Parse(elements[1])}));
+
+            ////obstacles = new List<List<int>>
+            ////{
+            ////    new List<int> {3, 5}
+            ////};
+
+            //result = QueensAttack.NumberOfMoves3(100, 100, 48, 81, obstacles);
 
 
             //// 4. Max Deletions
@@ -134,7 +139,11 @@ namespace AllChallenges
 
             //HourGlass.MaxHourGlass(arr);
 
-            Console.WriteLine(result);
+            //Console.WriteLine(result);
+            listResult.ForEach((x) =>
+            {
+                Console.Write($"{x} ");
+            });
             Console.ReadLine();
         }
     }
