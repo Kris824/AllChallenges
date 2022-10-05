@@ -11,8 +11,59 @@ namespace AllChallenges
         {
             var result = 0;
             var listResult = new List<int>();
+
+            // 10. LexicalOrder
+            //var lines = File.ReadAllLines(@"D:\kishan\AllChallenges\AllChallenges\LexicalOrder\Input1.txt");
+            //var outputLines = File.ReadAllLines(@"D:\kishan\AllChallenges\AllChallenges\LexicalOrder\Output1.txt");
+
+            //var counter = 0;
+            //var failed = 0;
+            //foreach (var line in lines)
+            //{
+            //    var res = LexicalOrder.BiggerIsGreater3(line);
+            //    if (!res.Equals(outputLines[counter++]))
+            //    {
+            //        failed++;
+            //    }
+            //}
+
+            //Console.WriteLine(failed);
+            Console.WriteLine(LexicalOrder.BiggerIsGreater3(
+                "gbsbacdhcllxkicnjybetpugd"));
+
+            //// 9.Encryption
+
+            //var res = Encrypt.Encryption("iffactsdontfittotheorychangethefacts");
+            //Console.WriteLine(res);
+            //return;
+
+            //// 8. Organizing containers
+            //var res = OrganizeContainers.OrganizingContainers(new List<List<int>>
+            //{
+            //    //new List<int> {2, 3, 3, 4, 5},
+            //    //new List<int> {5, 5, 4, 4, 3},
+            //    //new List<int> {2, 2, 4, 3, 5},
+            //    //new List<int> {5, 2, 3, 5, 1},
+            //    //new List<int> {1, 4, 2, 5, 3}
+
+            //    new List<int>{0,2},
+            //    new List<int>{1,1}
+            //});
+
+            //Console.WriteLine(res);
+            //return;
+
+            //// 7. Taum's Bday
+            //var result1 = TaumsBday.TaumBday(27984, 1402, 619246, 615589, 247954);
+            //Console.WriteLine(result1);
+            //return;
+
+
             // 6. ACM ICPC Team
-            listResult = AcmIcpcTeam.AcmTeam2(new List<string> { "10101", "11110", "00010" });
+            //var lines = File.ReadAllLines(@"D:\kishan\AllChallenges\AllChallenges\AcmIcpcTeam\Input1.txt");
+            // 97 5
+            //listResult = AcmIcpcTeam.AcmTeam3(new List<string> { "10101", "11100", "11010", "00101" });
+            //listResult = AcmIcpcTeam.AcmTeam3(lines.ToList());
 
 
             //// 5. Queen's attack
